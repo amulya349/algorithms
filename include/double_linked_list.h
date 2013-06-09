@@ -39,9 +39,7 @@ struct list_head {
  * the prev/next entries already!
  */
 static inline void 
-__list_add(struct list_head *n,
-			      struct list_head *prev,
-			      struct list_head *next)
+__list_add(struct list_head *n, struct list_head *prev, struct list_head *next)
 {
 	next->prev = n;
 	n->next = next;
